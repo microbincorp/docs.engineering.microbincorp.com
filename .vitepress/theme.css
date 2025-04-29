@@ -1,0 +1,29 @@
+:root {
+  --vp-c-brand: #0047AB; /* MicroBin Primary Blue */
+  --vp-c-brand-light: #3375C4;
+  --vp-c-brand-dark: #003380;
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f7f9fb;
+
+  --vp-c-text: #1a1a1a;
+  --vp-c-text-light: #4d4d4d;
+
+  --vp-c-border: #d9e2ec;
+}
+
+/* Header customization */
+.VPNavBar {
+  background-color: var(--vp-c-brand);
+}
+
+/* Link styles */
+a {
+  color: var(--vp-c-brand);
+}
+
+/* Active sidebar item */
+.VPSidebarItem.is-active > .text {
+  color: var(--vp-c-brand-dark);
+  font-weight: bold;
+}
