@@ -47,7 +47,10 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with VitePress
-        run: ${{ steps.detect-package-manager.outputs.runner }} vitepress build docs
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} vitepress build docs
+          echo "Build output directory contents:"
+          ls -la docs/.vitepress/dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

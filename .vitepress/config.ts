@@ -4,7 +4,10 @@ import '.theme.css'
 export default defineConfig({
   title: 'MicroBin Documentation',
   description: 'Documentation for MicroBin Corporation\'s products, solutions, and platforms',
-  base: '/docs.microbin.io/',
+  base: '/',
+  outDir: '../dist',
+  cleanUrls: true,
+  lastUpdated: true,
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
