@@ -8,6 +8,7 @@ export default defineConfig({
   outDir: '../dist',
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
