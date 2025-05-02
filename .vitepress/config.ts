@@ -9,6 +9,7 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: true,
+  srcDir: 'docs',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
@@ -23,8 +24,8 @@ export default defineConfig({
           text: 'Hardware',
           items: [
             { text: 'Introduction', link: '/hardware/' },
-            { text: 'Ex6eeder XP2', link: '/hardware/ex6eeder' },
-            { text: 'API Reference', link: '/hardware/api' }
+            { text: 'Ex6eeder XP2', link: '/hardware/ex6eeder/' },
+            { text: 'API Reference', link: '/hardware/api/' }
           ]
         }
       ],
@@ -33,7 +34,9 @@ export default defineConfig({
           text: 'IoT Dashboard',
           items: [
             { text: 'Introduction', link: '/iot-dashboard/' },
-            { text: 'Getting Started', link: '/iot-dashboard/getting-started' }
+            { text: 'Getting Started', link: '/iot-dashboard/getting-started/' },
+            { text: 'User Guide', link: '/iot-dashboard/user-guide/' },
+            { text: 'Tutorials', link: '/iot-dashboard/tutorials/' }
           ]
         }
       ],
@@ -42,7 +45,7 @@ export default defineConfig({
           text: 'PlatformQ',
           items: [
             { text: 'Introduction', link: '/platformq/' },
-            { text: 'Account Creation', link: '/platformq/account-creation' }
+            { text: 'Account Creation', link: '/platformq/account-creation/' }
           ]
         }
       ]
