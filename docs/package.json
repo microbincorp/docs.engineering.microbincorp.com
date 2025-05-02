@@ -1,0 +1,18 @@
+
+{
+  "name": "microbin-docs",
+  "version": "1.0.0",
+  "description": "MicroBin Documentation",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "vitepress": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "vue": "^3.4.0"
+  }
+}
