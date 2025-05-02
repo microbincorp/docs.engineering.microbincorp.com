@@ -1,4 +1,4 @@
-# MicroBin Documentation
+# MICROBIN CORP: PUBLIC DOCUMENTATION
 
 This repository contains the official VitePress-powered documentation for MicroBin Corporation's products, solutions, and platforms.
 
