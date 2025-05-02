@@ -14,6 +14,6 @@ The Ex6eeder XP2 is our latest hardware platform.
 
 ## Documentation
 
-- [User Guide](/hardware/ex6eeder/user-guide/)
-- [Technical Specifications](/hardware/ex6eeder/specs/)
-- [API Reference](/hardware/ex6eeder/api/) 
+- User Guide
+- Technical Specifications
+- API Reference 

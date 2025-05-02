@@ -4,9 +4,9 @@ This section contains the user guide for our IoT Dashboard.
 
 ## Getting Started
 
-- [Quick Start](/iot-dashboard/getting-started/)
-- [Basic Concepts](/iot-dashboard/concepts/)
-- [First Dashboard](/iot-dashboard/first-dashboard/)
+- Quick Start
+- Basic Concepts
+- First Dashboard
 
 ## Features
 

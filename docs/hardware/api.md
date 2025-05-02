@@ -4,9 +4,9 @@ This section contains the complete API reference for our hardware products.
 
 ## API Categories
 
-- [IO Module API](/hardware/io/api/)
-- [SOM API](/hardware/som/api/)
-- [SBC API](/hardware/sbc/api/)
+- IO Module API
+- SOM API
+- SBC API
 
 ## Getting Started
 
