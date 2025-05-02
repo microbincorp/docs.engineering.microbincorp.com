@@ -4,11 +4,11 @@
   "version": "v1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vitepress",
-    "build": "vitepress build",
-    "build:dev": "vitepress build --mode development",
+    "dev": "cd docs && vitepress",
+    "build": "cd docs && vitepress build",
+    "build:dev": "cd docs && vitepress build --mode development",
     "lint": "eslint .",
-    "preview": "vitepress preview"
+    "preview": "cd docs && vitepress preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
