@@ -1,4 +1,3 @@
-
 ---
 layout: home
 title: MicroBin Documentation
@@ -38,6 +37,7 @@ features:
     title: PlatformQ
     details: AI-enabled design & development platform for OEMs and SMBs
     link: /platformq/
+
 ---
 
 ::: tip Latest Updates
