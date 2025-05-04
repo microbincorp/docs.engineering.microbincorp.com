@@ -8,11 +8,9 @@
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
-  "dependencies": {
-    "vitepress": "^1.6.3"
-  },
   "devDependencies": {
     "@types/node": "^22.5.5",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "vitepress": "^1.6.3"
   }
 }

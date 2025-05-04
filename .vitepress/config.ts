@@ -13,30 +13,54 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Hardware', link: '/hardware/' },
-      { text: 'IoT Dashboard', link: '/iot-dashboard/' },
-      { text: 'PlatformQ', link: '/platformq/' },
-      { text: 'Contributing', link: '/contributing' }
+      {
+        text: 'Hardware',
+        items: [
+          { text: 'System on Modules (mbXSOM)', link: '/hardware/mbxsom/' },
+          { text: 'Infinite Board Computer (mbXXBC)', link: '/hardware/mbxxbc/' },
+          { text: 'Single Board Computer (mbXSBC)', link: '/hardware/mbxsbc/' },
+          { text: 'Development Kit (mbXDVK)', link: '/hardware/mbxdvk/' },
+          { text: 'I/O Board (mbXIOB)', link: '/hardware/mbxiob/' }
+        ]
+      },
+      {
+        text: 'Cloud IoT Dashboard Builder',
+        items: [
+          { text: 'Device Monitoring (mbXRDM)', link: '/iot-dashboard/mbxrdm/' },
+          { text: 'Device Control (mbXRDC)', link: '/iot-dashboard/mbxrdc/' },
+          { text: 'OTA Updates (mbXOTA)', link: '/iot-dashboard/mbxota/' }
+        ]
+      },
+      {
+        text: 'PlatformQ',
+        items: [
+          { text: 'Hardware Design', link: '/platformq/hardware-design/' },
+          { text: 'Firmware Development', link: '/platformq/firmware-development/' },
+          { text: 'Embedded Software Applications', link: '/platformq/embedded-software/' },
+          { text: 'Electronics (ESDM) services', link: '/platformq/esdm-services/' }
+        ]
+      }
     ],
     sidebar: {
       '/hardware/': [
         {
           text: 'Hardware',
           items: [
-            { text: 'Introduction', link: '/hardware/' },
-            { text: 'Ex6eeder XP2', link: '/hardware/ex6eeder/' },
-            { text: 'API Reference', link: '/hardware/api/' }
+            { text: 'System on Modules (mbXSOM)', link: '/hardware/mbxsom/' },
+            { text: 'Infinite Board Computer (mbXXBC)', link: '/hardware/mbxxbc/' },
+            { text: 'Single Board Computer (mbXSBC)', link: '/hardware/mbxsbc/' },
+            { text: 'Development Kit (mbXDVK)', link: '/hardware/mbxdvk/' },
+            { text: 'I/O Board (mbXIOB)', link: '/hardware/mbxiob/' }
           ]
         }
       ],
       '/iot-dashboard/': [
         {
-          text: 'IoT Dashboard',
+          text: 'Cloud IoT Dashboard Builder',
           items: [
-            { text: 'Introduction', link: '/iot-dashboard/' },
-            { text: 'Getting Started', link: '/iot-dashboard/getting-started/' },
-            { text: 'User Guide', link: '/iot-dashboard/user-guide/' },
-            { text: 'Tutorials', link: '/iot-dashboard/tutorials/' }
+            { text: 'Device Monitoring (mbXRDM)', link: '/iot-dashboard/mbxrdm/' },
+            { text: 'Device Control (mbXRDC)', link: '/iot-dashboard/mbxrdc/' },
+            { text: 'OTA Updates (mbXOTA)', link: '/iot-dashboard/mbxota/' }
           ]
         }
       ],
@@ -44,8 +68,10 @@ export default defineConfig({
         {
           text: 'PlatformQ',
           items: [
-            { text: 'Introduction', link: '/platformq/' },
-            { text: 'Account Creation', link: '/platformq/account-creation/' }
+            { text: 'Hardware Design', link: '/platformq/hardware-design/' },
+            { text: 'Firmware Development', link: '/platformq/firmware-development/' },
+            { text: 'Embedded Software Applications', link: '/platformq/embedded-software/' },
+            { text: 'Electronics (ESDM) services', link: '/platformq/esdm-services/' }
           ]
         }
       ]
