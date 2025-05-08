@@ -8,13 +8,13 @@ The ADC driver for the Per4mer SOM platform provides a robust interface for the 
 
 ---
 
-#### Includes
+### Includes
 
 ```c
 #include <adc.h>
 ```
 
-#### Key Functions
+### Key Functions
 
 #### `MBX_adcInit`
 
@@ -88,7 +88,7 @@ Retrieves ADC data for the specified number of channels.
 
 ---
 
-#### Enumerations
+### Enumerations
 
 #### `ADC_Status_TypeDef`
 
@@ -156,7 +156,7 @@ Defines available ADC channels.
 
 ---
 
-#### Structures
+### Structures
 
 #### `ADC_Config_TypeDef`
 
@@ -177,13 +177,13 @@ The ESP32-C6 Bluetooth Low Energy (BLE) interface APIs provide a comprehensive i
 
 ---
 
-#### Includes
+### Includes
 
 ```c
 #include <esp32c6.h>
 ```
 
-#### Key Functions
+### Key Functions
 
 #### `ESPAT_BleServerInit`
 
@@ -332,7 +332,7 @@ This function sets the attribute value of a specified BLE service and characteri
 
 ---
 
-#### Enumerations
+### Enumerations
 
 #### `ESPAT_Status_TypeDef`
 
@@ -346,7 +346,7 @@ Defines status codes for ESP-AT command operations.
 
 ---
 
-#### Structures
+### Structures
 
 #### `ESPAT_BleAdv_Config`
 
@@ -370,7 +370,7 @@ The ESP32-C6 WiFi driver for the Per4mer SOM platform provides a robust interfac
 
 ---
 
-#### Key Functions
+### Key Functions
 
 #### `ESPAT_WifiSetMode`
 
@@ -649,8 +649,9 @@ Closes an active TCP connection.
 
 ---
 
-#### Enumerations
+### Enumerations
 
+#### `wifi_auth_mode_t`
 Defines authentication modes for SoftAP.
 
 | Enumerator                 | Description                   |
@@ -662,7 +663,7 @@ Defines authentication modes for SoftAP.
 
 ---
 
-#### Structures
+### Structures
 
 #### `ESPAT_WifiAp_Config`
 
@@ -685,7 +686,6 @@ typedef struct {
 
 Holds configuration parameters for Station mode.
 
-#### Public Members
 ```c
 typedef struct {
   uint8_t ssid[32];           /**< SSID of target AP. */
