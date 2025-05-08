@@ -390,7 +390,7 @@ ESPAT_Status_TypeDef ESPAT_WifiSetMode(uint8_t mode)
 
 Sets the WiFi operating mode of the ESP32-C6 module.
 
-This function configures the WiFi mode (Station, SoftAP, or both) by sending the appropriate AT command over UART.
+This function configures the WiFi mode (Station, SoftAP, or both)
 
 #### Parameters
 
@@ -461,7 +461,7 @@ ESPAT_Status_TypeDef ESPAT_WifiDhcpConfig(uint8_t mode, uint8_t enable)
 
 Configures DHCP settings for the ESP32-C6 module.
 
-This function enables or disables DHCP for the specified WiFi mode (Station, SoftAP, or both) using an AT command.
+This function enables or disables DHCP for the specified WiFi mode (Station, SoftAP, or both).
 
 #### Parameters
 
@@ -485,7 +485,7 @@ ESPAT_Status_TypeDef ESPAT_WifiPowerSave(uint8_t mode)
 
 Configures the WiFi power-saving mode of the ESP32-C6 module.
 
-This function sets the power-saving mode using an AT command.
+This function sets the power-saving mode.
 
 #### Parameters
 
@@ -581,7 +581,7 @@ ESPAT_Status_TypeDef ESPAT_TcpServerMode(uint16_t port)
 
 Enables TCP server mode on the ESP32-C6 module.
 
-This function enables multiple connections (`AT+CIPMUX`) and starts a TCP server on the specified port (`AT+CIPSERVER`).
+This function enables multiple connections and starts a TCP server on the specified port.
 
 #### Parameters
 
@@ -604,7 +604,7 @@ ESPAT_Status_TypeDef ESPAT_TcpClientMode(void)
 
 Configures the ESP32-C6 module for TCP client mode.
 
-This function sets single-connection mode using `AT+CIPMUX=0`.
+This function sets single-connection mode using.
 
 #### Return Values
 
@@ -622,8 +622,6 @@ ESPAT_Status_TypeDef ESPAT_WifiGetConnectionStatus(char *status_buffer, size_t b
 ```
 
 Retrieves the current WiFi connection status.
-
-This function sends `AT+CIPSTATUS` and stores the response in the provided buffer.
 
 #### Parameters
 
@@ -647,7 +645,6 @@ ESPAT_Status_TypeDef ESPAT_TcpCloseConnection(uint8_t link_id)
 
 Closes an active TCP connection.
 
-This function sends `AT+CIPCLOSE` to close the specified connection.
 
 #### Parameters
 
