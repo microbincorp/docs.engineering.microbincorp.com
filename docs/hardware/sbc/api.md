@@ -2,15 +2,7 @@
 
 This section contains the API reference for the Single Board Computer.
 
-## API Overview
-
-- System Management
-- GPIO Control
-- Communication Interfaces
-- Storage Access
-
-
-# MBX ADC APIs
+## MBX ADC APIs
 
 The ADC driver for the Per4mer SOM platform provides a robust interface for the analog-to-digital converter (ADC). This driver facilitates ADC initialization, configuration, data acquisition, and SPI communication, ensuring precise and efficient sampling for high-accuracy analog signal processing. The ADC is an 8-channel, 24-bit delta-sigma converter, designed for high-precision applications with low noise and high data rates. The driver supports configuring individual channels, managing gain settings, and selecting sampling rates to meet diverse application requirements.
 
@@ -22,9 +14,9 @@ The ADC driver for the Per4mer SOM platform provides a robust interface for the 
 #include <adc.h>
 ```
 
-## Key Functions
+#### Key Functions
 
-### `MBX_adcInit`
+#### `MBX_adcInit`
 
 ```c
 ADC_Status_TypeDef MBX_adcInit(ADC_Config_TypeDef *init)
@@ -71,17 +63,14 @@ if (MBX_adcInit(&adc_config) == ADC_OK) {
 
 ---
 
-### `MBX_adcGet`
+#### `mbXADC_Get`
 
 ```c
-ADC_Status_TypeDef MBX_adcGet(int32_t *data, uint8_t n_channel)
+ADC_Status_TypeDef mbXADC_Get(int32_t *data, uint8_t n_channel)
 ```
 
 Retrieves ADC data for the specified number of channels.
 
-> [!NOTE]
-> Calls `ADS131M08_GetAdc()` to fetch ADC data.
-> Maps returned status to `ADC_Status_TypeDef` values.
 
 #### Parameters
 
@@ -99,9 +88,9 @@ Retrieves ADC data for the specified number of channels.
 
 ---
 
-## Enumerations
+#### Enumerations
 
-### `ADC_Status_TypeDef`
+#### `ADC_Status_TypeDef`
 
 Defines status codes for ADC operations.
 
@@ -116,7 +105,7 @@ Defines status codes for ADC operations.
 
 ---
 
-### `ADC_Gain_TypeDef`
+#### `ADC_Gain_TypeDef`
 
 Specifies available gain settings for ADC channels.
 
@@ -133,7 +122,7 @@ Specifies available gain settings for ADC channels.
 
 ---
 
-### `ADC_SamplingRate_TypeDef`
+#### `ADC_SamplingRate_TypeDef`
 
 Lists supported ADC sampling rates.
 
@@ -150,7 +139,7 @@ Lists supported ADC sampling rates.
 
 ---
 
-### `ADC_Channel_TypeDef`
+#### `ADC_Channel_TypeDef`
 
 Defines available ADC channels.
 
@@ -167,22 +156,22 @@ Defines available ADC channels.
 
 ---
 
-## Structures
+#### Structures
 
-### `ADC_Config_TypeDef`
+#### `ADC_Config_TypeDef`
 
 Holds ADC configuration parameters.
 
-#### Public Members
+```c
+typedef struct {
+  ADC_Gain_TypeDef gain[ADC_CH_COUNT];  /**< Gain settings for each ADC channel */
+  ADC_SamplingRate_TypeDef dataRate;    /**< ADC sampling rate */
+} ADC_Config_TypeDef;
+```
 
-- `ADC_Gain_TypeDef gain[ADC_CH_COUNT]`: Gain settings for each ADC channel.
-- `ADC_SamplingRate_TypeDef dataRate`: ADC sampling rate.
-
----
 
 
-
-# ESP32-C6 BLE APIs
+## ESP32-C6 BLE APIs
 
 The ESP32-C6 Bluetooth Low Energy (BLE) interface APIs provide a comprehensive implementation for handling BLE communication on the ESP32-C6 module. These APIs support initializing the module as a BLE server, configuring services and characteristics, managing advertisements, and handling data transmission. Developed by the Microbin Firmware Team, this implementation ensures reliable and efficient BLE operations for embedded applications.
 
@@ -194,9 +183,9 @@ The ESP32-C6 Bluetooth Low Energy (BLE) interface APIs provide a comprehensive i
 #include <esp32c6.h>
 ```
 
-## Key Functions
+#### Key Functions
 
-### `ESPAT_BleServerInit`
+#### `ESPAT_BleServerInit`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_BleServerInit(void)
@@ -215,7 +204,7 @@ This function configures the BLE stack, enabling the ESP32-C6 to accept connecti
 
 ---
 
-### `ESPAT_SetDeviceName`
+#### `ESPAT_SetDeviceName`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_SetDeviceName(const char *name)
@@ -238,7 +227,7 @@ This function configures the device name visible to other BLE devices during sca
 
 ---
 
-### `ESPAT_BleAdvStart`
+#### `ESPAT_BleAdvStart`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_BleAdvStart(const ESPAT_BleAdv_Config *adv_config)
@@ -265,7 +254,7 @@ This function initializes and starts BLE advertising using the provided configur
 
 ---
 
-### `ESPAT_BleNotify`
+#### `ESPAT_BleNotify`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_BleNotify(uint8_t srv_index, uint8_t char_index, const char *data, size_t data_len)
@@ -291,7 +280,7 @@ This function transmits a notification from the specified BLE service and charac
 
 ---
 
-### `ESPAT_BleIndicate`
+#### `ESPAT_BleIndicate`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_BleIndicate(uint8_t srv_index, uint8_t char_index, const char *data, size_t data_len)
@@ -317,7 +306,7 @@ This function transmits an indication from the specified BLE service and charact
 
 ---
 
-### `ESPAT_BleSetAtt`
+#### `ESPAT_BleSetAtt`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_BleSetAtt(uint8_t srv_index, uint8_t char_index, const char *data, size_t data_len)
@@ -343,9 +332,9 @@ This function sets the attribute value of a specified BLE service and characteri
 
 ---
 
-## Enumerations
+#### Enumerations
 
-### `ESPAT_Status_TypeDef`
+#### `ESPAT_Status_TypeDef`
 
 Defines status codes for ESP-AT command operations.
 
@@ -357,31 +346,33 @@ Defines status codes for ESP-AT command operations.
 
 ---
 
-## Structures
+#### Structures
 
-### `ESPAT_BleAdv_Config`
+#### `ESPAT_BleAdv_Config`
 
 Holds configuration parameters for ESP32 BLE advertisement.
 
-#### Public Members
+```c
+typedef struct {
+  char *device_name;         /**< Device name for BLE advertisement */
+  char *manufacture_data;    /**< Manufacturer data to be included in the advertisement */
+  uint16_t uuid;             /**< UUID for BLE advertisement */
+  uint8_t include_power;     /**< Flag to include power information (1 = Yes, 0 = No) */
+} ESPAT_BleAdv_Config;
+```
 
-- `char *device_name`: Device name for BLE advertisement.
-- `char *manufacture_data`: Manufacturer-specific data included in the advertisement.
-- `uint16_t uuid`: UUID for BLE advertisement.
-- `uint8_t include_power`: Flag to include power information (1 = Yes, 0 = No).
 
 
 
-
-# ESP32-C6 WiFi APIs
+## ESP32-C6 WiFi APIs
 
 The ESP32-C6 WiFi driver for the Per4mer SOM platform provides a robust interface for managing wireless connectivity. This module enables network configuration, connection handling, and data transmission for IoT and embedded applications. It leverages AT commands to interact with the ESP32-C6 module, ensuring reliable and efficient WiFi operations.
 
 ---
 
-## Key Functions
+#### Key Functions
 
-### `ESPAT_WifiSetMode`
+#### `ESPAT_WifiSetMode`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiSetMode(uint8_t mode)
@@ -404,7 +395,7 @@ This function configures the WiFi mode (Station, SoftAP, or both)
 
 ---
 
-### `ESPAT_WifiGetIpAddress`
+#### `ESPAT_WifiGetIpAddress`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiGetIpAddress(char *ip_buffer, size_t buffer_size)
@@ -428,7 +419,7 @@ This function queries the current IP address using an AT command and stores it i
 
 ---
 
-### `ESPAT_WifiGetMacAddress`
+#### `ESPAT_WifiGetMacAddress`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiGetMacAddress(char *mac_buffer, size_t buffer_size)
@@ -452,7 +443,7 @@ This function sends an AT command to obtain the MAC address and stores it in the
 
 ---
 
-### `ESPAT_WifiDhcpConfig`
+#### `ESPAT_WifiDhcpConfig`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiDhcpConfig(uint8_t mode, uint8_t enable)
@@ -476,7 +467,7 @@ This function enables or disables DHCP for the specified WiFi mode (Station, Sof
 
 ---
 
-### `ESPAT_WifiPowerSave`
+#### `ESPAT_WifiPowerSave`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiPowerSave(uint8_t mode)
@@ -499,7 +490,7 @@ This function sets the power-saving mode.
 
 ---
 
-### `ESPAT_WifiApGetClientList`
+#### `ESPAT_WifiApGetClientList`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiApGetClientList(char *client_list, size_t buffer_size)
@@ -523,7 +514,7 @@ This function queries the ESP32-C6 module for connected client details (IP and M
 
 ---
 
-### `ESPAT_WifiScan`
+#### `ESPAT_WifiScan`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiScan(char *scan_result, size_t buffer_size)
@@ -548,7 +539,7 @@ This function initiates a WiFi scan using AT commands, storing details of nearby
 
 ---
 
-### `ESPAT_WifiSetDns`
+#### `ESPAT_WifiSetDns`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiSetDns(const char *dns1, const char *dns2)
@@ -572,7 +563,7 @@ This function sets primary and secondary DNS servers using AT commands.
 
 ---
 
-### `ESPAT_TcpServerMode`
+#### `ESPAT_TcpServerMode`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_TcpServerMode(uint16_t port)
@@ -595,7 +586,7 @@ This function enables multiple connections and starts a TCP server on the specif
 
 ---
 
-### `ESPAT_TcpClientMode`
+#### `ESPAT_TcpClientMode`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_TcpClientMode(void)
@@ -614,7 +605,7 @@ This function sets single-connection mode using.
 
 ---
 
-### `ESPAT_WifiGetConnectionStatus`
+#### `ESPAT_WifiGetConnectionStatus`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_WifiGetConnectionStatus(char *status_buffer, size_t buffer_size)
@@ -636,7 +627,7 @@ Retrieves the current WiFi connection status.
 
 ---
 
-### `ESPAT_TcpCloseConnection`
+#### `ESPAT_TcpCloseConnection`
 
 ```c
 ESPAT_Status_TypeDef ESPAT_TcpCloseConnection(uint8_t link_id)
@@ -658,9 +649,7 @@ Closes an active TCP connection.
 
 ---
 
-## Enumerations
-
-### `wifi.ConcurrentModificationException`
+#### Enumerations
 
 Defines authentication modes for SoftAP.
 
@@ -673,37 +662,34 @@ Defines authentication modes for SoftAP.
 
 ---
 
-## Structures
+#### Structures
 
-### `ESPAT_WifiAp_Config`
+#### `ESPAT_WifiAp_Config`
 
 Holds configuration parameters for SoftAP mode.
 
-#### Public Members
+```c
+typedef struct {
+  uint8_t ssid[32];           /**< SSID of soft-AP. If ssid_len field is 0, this must be a Null terminated string. Otherwise, length is set according to ssid_len. */
+  uint8_t password[64];       /**< Password of soft-AP. */
+  uint8_t ssid_len;           /**< Optional length of SSID field. */
+  uint8_t channel;            /**< Channel of soft-AP */
+  wifi_auth_mode_t
+  authmode;  /**< Auth mode of soft-AP. Do not support AUTH_WEP, AUTH_WAPI_PSK and AUTH_OWE in soft-AP mode. When the auth mode is set to WPA2_PSK, WPA2_WPA3_PSK or WPA3_PSK, the pairwise cipher will be overwritten with WIFI_CIPHER_TYPE_CCMP.  */
+  uint8_t ssid_hidden;        /**< Broadcast SSID or not, default 0, broadcast the SSID */
+  uint8_t max_connection;     /**< Max number of stations allowed to connect in */
+} ESPAT_WifiAp_Config;
+```
 
-- `uint8_t ssid[32]`: SSID of the SoftAP (null-terminated if `ssid_len` is 0).
-- `uint8_t password[64]`: Password of the SoftAP.
-- `uint8_t ssid_len`: Optional length of the SSID field.
-- `uint8_t channel`: Channel of the SoftAP.
-- `wifi_auth_mode_t authmode`: Authentication mode (does not support AUTH_WEP, AUTH_WAPI_PSK, or AUTH_OWE; uses WIFI_CIPHER_TYPE_CCMP for WPA2_PSK, WPA2_WPA3_PSK, or WPA3_PSK).
-- `uint8_t ssid_hidden`: Broadcast SSID (0 = broadcast, 1 = hidden).
-- `uint8_t max_connection`: Maximum number of connected stations.
-
----
-
-### `ESPAT_WifiSta_Config`
+#### `ESPAT_WifiSta_Config`
 
 Holds configuration parameters for Station mode.
 
 #### Public Members
+```c
+typedef struct {
+  uint8_t ssid[32];           /**< SSID of target AP. */
+  uint8_t password[64];       /**< Password of target AP. */
+} ESPAT_WifiSta_Config;
+```
 
-- `uint8_t ssid[32]`: SSID of the target AP.
-- `uint8_t password[64]`: Password of the target AP.
-
----
-
-
-## Endpoints
-Complete endpoint documentation will be available here.
-## Examples
-API usage examples will be documented here. 
