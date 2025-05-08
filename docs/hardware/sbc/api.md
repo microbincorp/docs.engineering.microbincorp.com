@@ -48,11 +48,11 @@ if (MBX_adcInit(&adc_config) == ADC_OK) {
 }
 ```
 
-#### Notes
+> [!NOTE]
+> Initializes ADC communication.
+> Configures gain and data rate.
+> Executes startup commands for reliable operation.
 
-- Initializes ADC communication.
-- Configures gain and data rate.
-- Executes startup commands for reliable operation.
 
 #### Parameters
 
@@ -79,10 +79,9 @@ ADC_Status_TypeDef MBX_adcGet(int32_t *data, uint8_t n_channel)
 
 Retrieves ADC data for the specified number of channels.
 
-#### Notes
-
-- Calls `ADS131M08_GetAdc()` to fetch ADC data.
-- Maps returned status to `ADC_Status_TypeDef` values.
+> [!NOTE]
+> Calls `ADS131M08_GetAdc()` to fetch ADC data.
+> Maps returned status to `ADC_Status_TypeDef` values.
 
 #### Parameters
 
