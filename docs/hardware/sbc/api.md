@@ -162,12 +162,12 @@ Defines available ADC channels.
 
 Holds ADC configuration parameters.
 
-#### Public Members
-
-- `ADC_Gain_TypeDef gain[ADC_CH_COUNT]`: Gain settings for each ADC channel.
-- `ADC_SamplingRate_TypeDef dataRate`: ADC sampling rate.
-
----
+```c
+typedef struct {
+  ADC_Gain_TypeDef gain[ADC_CH_COUNT];  /**< Gain settings for each ADC channel */
+  ADC_SamplingRate_TypeDef dataRate;    /**< ADC sampling rate */
+} ADC_Config_TypeDef;
+```
 
 
 
@@ -332,7 +332,7 @@ This function sets the attribute value of a specified BLE service and characteri
 
 ---
 
-## Enumerations
+#### Enumerations
 
 #### `ESPAT_Status_TypeDef`
 
@@ -346,18 +346,20 @@ Defines status codes for ESP-AT command operations.
 
 ---
 
-## Structures
+#### Structures
 
 #### `ESPAT_BleAdv_Config`
 
 Holds configuration parameters for ESP32 BLE advertisement.
 
-#### Public Members
-
-- `char *device_name`: Device name for BLE advertisement.
-- `char *manufacture_data`: Manufacturer-specific data included in the advertisement.
-- `uint16_t uuid`: UUID for BLE advertisement.
-- `uint8_t include_power`: Flag to include power information (1 = Yes, 0 = No).
+```c
+typedef struct {
+  char *device_name;         /**< Device name for BLE advertisement */
+  char *manufacture_data;    /**< Manufacturer data to be included in the advertisement */
+  uint16_t uuid;             /**< UUID for BLE advertisement */
+  uint8_t include_power;     /**< Flag to include power information (1 = Yes, 0 = No) */
+} ESPAT_BleAdv_Config;
+```
 
 
 
@@ -660,30 +662,34 @@ Defines authentication modes for SoftAP.
 
 ---
 
-## Structures
+#### Structures
 
-### `ESPAT_WifiAp_Config`
+#### `ESPAT_WifiAp_Config`
 
 Holds configuration parameters for SoftAP mode.
 
-#### Public Members
+```c
+typedef struct {
+  uint8_t ssid[32];           /**< SSID of soft-AP. If ssid_len field is 0, this must be a Null terminated string. Otherwise, length is set according to ssid_len. */
+  uint8_t password[64];       /**< Password of soft-AP. */
+  uint8_t ssid_len;           /**< Optional length of SSID field. */
+  uint8_t channel;            /**< Channel of soft-AP */
+  wifi_auth_mode_t
+  authmode;  /**< Auth mode of soft-AP. Do not support AUTH_WEP, AUTH_WAPI_PSK and AUTH_OWE in soft-AP mode. When the auth mode is set to WPA2_PSK, WPA2_WPA3_PSK or WPA3_PSK, the pairwise cipher will be overwritten with WIFI_CIPHER_TYPE_CCMP.  */
+  uint8_t ssid_hidden;        /**< Broadcast SSID or not, default 0, broadcast the SSID */
+  uint8_t max_connection;     /**< Max number of stations allowed to connect in */
+} ESPAT_WifiAp_Config;
+```
 
-- `uint8_t ssid[32]`: SSID of the SoftAP (null-terminated if `ssid_len` is 0).
-- `uint8_t password[64]`: Password of the SoftAP.
-- `uint8_t ssid_len`: Optional length of the SSID field.
-- `uint8_t channel`: Channel of the SoftAP.
-- `wifi_auth_mode_t authmode`: Authentication mode (does not support AUTH_WEP, AUTH_WAPI_PSK, or AUTH_OWE; uses WIFI_CIPHER_TYPE_CCMP for WPA2_PSK, WPA2_WPA3_PSK, or WPA3_PSK).
-- `uint8_t ssid_hidden`: Broadcast SSID (0 = broadcast, 1 = hidden).
-- `uint8_t max_connection`: Maximum number of connected stations.
-
----
-
-### `ESPAT_WifiSta_Config`
+#### `ESPAT_WifiSta_Config`
 
 Holds configuration parameters for Station mode.
 
 #### Public Members
-
-- `uint8_t ssid[32]`: SSID of the target AP.
-- `uint8_t password[64]`: Password of the target AP.
+```c
+typedef struct {
+  uint8_t ssid[32];           /**< SSID of target AP. */
+  uint8_t password[64];       /**< Password of target AP. */
+} ESPAT_WifiSta_Config;
+```
 
