@@ -11,20 +11,20 @@
   * [Environment Variables](per4mer/getting-started/env-vars.md)
   * [Initial Build Instructions](per4mer/getting-started/build-instructions.md)
 
-<!-- * [Build System & Scripts](build-system/build-system.md)
-  * [Script Architecture](build-system/architecture.md)
-  * [Command Overview](build-system/commands.md) -->
+* [Build System & Scripts](per4mer/build-system/build-system.md)
+  * [Script Architecture](per4mer/build-system/architecture.md)
+  * [Command Overview](per4mer/build-system/commands.md)
 
-<!-- * [Flashing & Programming]()
-  * [External Loader Setup](flashing/loader.md)
-  * [STM32 Firmware](flashing/stm32.md)
-  * [ESP32 Firmware (ESP-AT)](flashing/esp32.md)
-  * [Debugging Tips](flashing/debugging.md) -->
+* [Flashing & Programming]()
+  * [External Loader Setup](per4mer/flashing/loader.md)
+  * [STM32 Firmware](per4mer/flashing/stm32.md)
+  * [ESP32 Firmware (ESP-AT)](per4mer/flashing/esp32.md)
+  * [Debugging Tips](per4mer/flashing/debugging.md)
 
-<!-- * [Folder & Project Architecture](project-structure/project-structure.md) -->
+* [Folder & Project Architecture](per4mer/project-structure/project-structure.md)
 
-<!-- * [Clock & Peripheral Configuration](clock-config/clock-config.md) -->
+* [Clock & Peripheral Configuration](per4mer/clock-config/clock-config.md)
 
-<!-- * [Testing & Validation](testing/testing.md)
-  * [Test Framework](testing/framework.md)
-  * [Interface Validation](testing/interface-tests.md) -->
+* [Testing & Validation](per4mer/testing/testing.md)
+  * [Test Framework](per4mer/testing/framework.md)
+  * [Interface Validation](per4mer/testing/interface-tests.md)
