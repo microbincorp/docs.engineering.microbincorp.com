@@ -1,9 +1,9 @@
 # Summary
 
-* [Introduction](introduction.md)
-  * [Project Overview](introduction/project-overview.md)
-  * [Hardware Architecture](introduction/hardware-architecture.md)
-  * [Platform Objectives](introduction/platform-objectives.md)
+* [Introduction](per4mer/introduction.md)
+  * [Project Overview](per4mer/introduction/project-overview.md)
+  * [Hardware Architecture](per4mer/introduction/hardware-architecture.md)
+  * [Platform Objectives](per4mer/introduction/platform-objectives.md)
 
 <!-- * [Getting Started](getting-started.md)
   * [Toolchain Setup](getting-started/toolchain-setup.md)
