@@ -5,7 +5,7 @@
   * [Hardware Architecture](introduction/hardware-architecture.md)
   * [Platform Objectives](introduction/platform-objectives.md)
 
-* [Getting Started](getting-started.md)
+<!-- * [Getting Started](getting-started.md)
   * [Toolchain Setup](getting-started/toolchain-setup.md)
   * [Repository Access](getting-started/repo-access.md)
   * [Environment Variables](getting-started/env-vars.md)
@@ -50,4 +50,4 @@
 * [API Reference](api.md)
   * [Invoke Script API](api/invoke.md)
   * [Middleware APIs](api/middleware.md)
-  * [Driver & Utility APIs](api/drivers.md)
+  * [Driver & Utility APIs](api/drivers.md) -->
