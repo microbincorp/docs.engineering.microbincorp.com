@@ -1,4 +1,4 @@
-## Flashing the executable to the STM32 target
+# Flashing the executable to the STM32 target
 
 - Select the executable.
 
@@ -25,6 +25,8 @@
 5. Wait for the progress bar to reach 100%. Once the Flash Download Complete message appears, you can restart your Per4mer board.
 
 ![flash completed](../images/flash_completed.png)
+
+---
 
 # Flashing the ESP-AT firmware to the ESP32 target
 
