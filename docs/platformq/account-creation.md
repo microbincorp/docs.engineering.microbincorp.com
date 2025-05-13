@@ -1,4 +1,3 @@
-
 ---
 title: Account Creation
 description: How to create and set up your PlatformQ account

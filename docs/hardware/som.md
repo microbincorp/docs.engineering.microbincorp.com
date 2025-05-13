@@ -1,4 +1,3 @@
-
 ---
 title: System on Modules
 description: Documentation for MicroBin's System on Module products

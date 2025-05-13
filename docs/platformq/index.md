@@ -1,4 +1,3 @@
-
 ---
 title: PlatformQ Documentation
 description: AI-enabled design & development platform for OEMs and SMBs
