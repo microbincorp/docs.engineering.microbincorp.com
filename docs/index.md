@@ -8,7 +8,7 @@ hero:
   text: Your complete resource for MicroBin products
   tagline: Find documentation for hardware, IoT Dashboard, and PlatformQ
   image:
-    src: /logo.png
+    src: /logo_light.png
     alt: MicroBin Logo
   actions:
     - theme: brand
@@ -39,7 +39,6 @@ features:
     link: /platformq/
 
 ---
-
 ::: tip Latest Updates
 Check out our latest hardware release, the [Ex6eeder XP2](/hardware/ex6eeder)!
 :::
