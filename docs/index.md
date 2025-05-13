@@ -8,7 +8,7 @@ hero:
   text: Your complete resource for MicroBin products
   tagline: Find documentation for hardware, IoT Dashboard, and PlatformQ
   image:
-    src: /logo_light.png
+    src: /logo_gradient.png
     alt: MicroBin Logo
   actions:
     - theme: brand
