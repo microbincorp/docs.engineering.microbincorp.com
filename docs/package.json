@@ -2,6 +2,7 @@
 {
   "name": "microbin-docs",
   "version": "1.0.0",
+  "type": "module",
   "description": "MicroBin Documentation",
   "scripts": {
     "docs:dev": "vitepress dev",

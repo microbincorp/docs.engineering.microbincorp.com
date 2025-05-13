@@ -1,4 +1,3 @@
-
 ---
 title: Getting Started with IoT Dashboard
 description: Quick start guide to using the MicroBin IoT Dashboard

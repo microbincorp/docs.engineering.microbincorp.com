@@ -1,4 +1,3 @@
-
 ---
 title: IoT Dashboard Documentation
 description: Learn how to use our IoT Dashboard Builder and integrate with its API
