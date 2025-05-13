@@ -1,4 +1,3 @@
-
 ---
 title: I/O Boards
 description: Documentation for MicroBin's Input/Output expansion boards

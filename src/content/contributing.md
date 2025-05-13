@@ -1,4 +1,3 @@
-
 ---
 title: Contributing to Documentation
 description: How to add or edit documentation for MicroBin products

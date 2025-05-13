@@ -1,4 +1,3 @@
-
 ---
 title: Single Board Computers
 description: Documentation for MicroBin's Single Board Computer products

@@ -1,4 +1,3 @@
-
 ---
 title: Hardware Documentation
 description: Documentation for MicroBin's commercial off-the-shelf hardware products
