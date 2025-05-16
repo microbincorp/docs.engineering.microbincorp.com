@@ -13,26 +13,11 @@ export default defineConfig({
             text: 'Hardware - Per4mer',
             collapsed: true,
             items: [
-              { text: 'Overview', link: '/hardware/' },
-              {
-                text: 'SBC', collapsed: true, link: '/hardware/sbc'
-              },
-              { text: 'SoM', link: '/hardware/som' },
-              { text: 'IO Boards', link: '/hardware/io' },
-              { text: 'DVK - Development Kit', link: '/hardware/sdk' },
-              { text: 'Infinite Board Computer', link: '/hardware/xbc' },
-              { text: 'API Reference', link: '/hardware/api' },
-              { text: 'BSP', link: '/hardware/bsp' },
-              { text: 'Drivers', link: '/hardware/drivers' },
-              {
-                text: 'Resources', collapsed: true, items: [
-                  {
-                    text: 'Datasheets',
-                    link: '/hardware/datasheets'
-                  }
-                ]
-              },
-
+              { text: 'Getting Started', link: '/hardware/per4mer/getting-started/getting-started' },
+              { text: 'Build Instructions', link: '/hardware/per4mer/getting-started/build-instructions' },
+              { text: 'Flashing Programming', link: '/hardware/per4mer/getting-started/flashing-programming' },
+              { text: 'Project Structure ', link: '/hardware/per4mer/getting-started/project-structure' },
+              { text: 'Toolchain Setup ', link: '/hardware/per4mer/getting-started/toolchain-setup' },
             ]
           },
           {
@@ -52,5 +37,9 @@ export default defineConfig({
         ],
       },
     ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: '© 2025 MICROBIN CORPORATION PRIVATE LIMITED. All Rights Reserved.'
+    }
   },
 });

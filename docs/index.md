@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: Hardware Docs
-      link: /hardware/
+      link: /hardware/per4mer/getting-started/getting-started.html
     # - theme: alt
     #   text: IoT Dashboard
     #   link: /iot-dashboard/
@@ -28,7 +28,7 @@ features:
   - icon: 📟
     title: Hardware Products
     details: Documentation for MicroBin's commercial off-the-shelf hardware products
-    link: /hardware/
+    link: /hardware/per4mer/getting-started/getting-started.html
   # - icon: 📊
   #   title: IoT Dashboard
   #   details: Learn how to use the IoT dashboard builder and access API documentation
