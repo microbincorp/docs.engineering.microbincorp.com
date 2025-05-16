@@ -7,7 +7,7 @@ const route = useRoute()
 <template>
   <DefaultTheme.Layout>
     <template #layout-bottom>
-      <footer style="padding-top:0px;color: var(--vp-c-text-2);">
+      <footer v-if="route.path === '/'" style="padding-top:0px;color: var(--vp-c-text-2);">
         <div style="border-top: 1px solid var(--vp-c-divider);padding:20px 20px;">
           <div class="content-width" style="display:flex">
             <div>
@@ -30,38 +30,19 @@ const route = useRoute()
           <div   class="content-width" style="text-align: center;display:flex;justify-content:space-between;width:100%;  ">
             <div>© 2025 MicroBin Docs</div>
           <div>
-            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
-            <a href="https://github.com/yourrepo" target="_blank">GitHub</a> |
-            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="https://www.linkedin.com/company/microbincorp" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/microbincorp" target="_blank">GitHub</a> |
+            <a href="https://www.microbin.io/privacy-policy" target="_blank">Privacy Policy</a>
           </div>
           </div>
         </div>
       </footer>
-
     </template>
   </DefaultTheme.Layout>
 </template>
 <style scoped>
 .content-width{
-  max-width:1200px;
+  max-width:calc(var(--vp-layout-max-width) - 64px);
   margin:0px auto;
-}
-.custom-footer {
-  border-top: 1px solid var(--vp-c-divider);
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  color: var(--vp-c-text-2);
-  background-color: var(--vp-c-bg);
-}
-
-.footer-links {
-  margin-top: 0.5rem;
-}
-
-.footer-links a {
-  margin: 0 0.5rem;
-  color: var(--vp-c-brand);
-  text-decoration: none;
 }
 </style>
