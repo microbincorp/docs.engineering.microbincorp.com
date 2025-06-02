@@ -71,7 +71,7 @@
 │   ├───mbx_config
 │   ├───mbx_docs
 │   ├───mbx_drivers
-│   │   └───STM32CubeF7
+│   │   └───STM32CubeF7 (included as a submodule)
 │   ├───mbx_external_loader
 │   │   ├───Core
 │   ├───mbx_libs
@@ -81,11 +81,11 @@
 │   ├───mbx_middlewares
 │   │   ├───level_0
 │   │   │   ├───FatFs
-│   │   │   ├───lvgl
+│   │   │   ├───lvgl  (included as a submodule)
 │   │   │   ├───LwIP
 │   │   │   ├───STM32_USB_Device_Library
 │   │   │   ├───STM32_USB_Host_Library
-│   │   │   └───threadx
+│   │   │   └───threadx (included as a submodule)
 │   │   └───level_1
 │   │       ├───FATFS
 │   │       ├───LWIP
